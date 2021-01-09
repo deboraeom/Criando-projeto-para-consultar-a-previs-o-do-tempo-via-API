@@ -1,0 +1,36 @@
+{ "cityOpnion":[
+    {
+        "id": 0,        
+        "polonorte": 5,
+        "muitofrio": 2,
+        "frio": 1,
+        "fresco": 0,
+        "calor": 0,
+        "muitoCarlor": 0,
+       "calorInfernal": 0,
+        "ceuLimpo": 0,
+        "nublado": 0,
+        "deveChuver": 0,
+        "chuviscando": 0,
+        "chuvendo": 0,
+        "ceuCaindo": 0,
+        "trovejando": 0
+      },
+    
+    {
+        "id": 1,        
+        "polonorte": 0,
+        "muitofrio": 0,
+        "frio": 0,
+        "fresco": 0,
+        "calor": 0,
+        "muitoCarlor": 0,
+       "calorInfernal": 0,
+        "ceuLimpo": 0,
+        "nublado": 0,
+        "deveChuver": 0,
+        "chuviscando": 7,
+        "chuvendo": 3,
+        "ceuCaindo": 0,
+        "trovejando": 0
+    }]}

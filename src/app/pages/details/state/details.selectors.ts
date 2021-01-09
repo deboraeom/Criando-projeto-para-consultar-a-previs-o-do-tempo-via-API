@@ -1,8 +1,15 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 
-import { DetailsState } from './details.reducer';
+import { DetailsState} from './details.reducer';
 
 export const selectDetailsState = createFeatureSelector<DetailsState>('details');
+
+export const selectOption = createSelector(
+  selectDetailsState,
+  (detailsState: DetailsState) => [detailsState.imgChosed, detailsState.chosed,detailsState.id, detailsState.maisVotado, detailsState.imgmaisVotado]
+);
+
+
 
 export const selectDetailsEntity = createSelector(
   selectDetailsState,
@@ -18,3 +25,5 @@ export const selectDetailsError = createSelector(
   selectDetailsState,
   (detailsState: DetailsState) => detailsState.error,
 );
+
+

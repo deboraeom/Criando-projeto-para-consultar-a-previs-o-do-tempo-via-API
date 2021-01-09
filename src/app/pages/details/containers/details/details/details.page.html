@@ -10,6 +10,25 @@
         <jv-detailed-weather [weather]="(details$ | async).current"
                              [unit]="unit$ | async"></jv-detailed-weather>
       </div>
+      
+      
+      <div class="card current-card">
+      <div class="wrapped">
+
+      
+      <jv-opinions [maisVotada]="(count$ | async)[3]" [imgMaisVotada]="(count$ | async)[4]" [imgSelecionada]="(count$ | async)[0]" [Selecionada]="(count$ | async)[1]"></jv-opinions>
+       <div class="vertical">
+         
+       <button (click)="seleciona()" class ="opnionButton" >Selecionar </button>
+       <button (click)="enviar()" class ="opnionButton" >Enviar</button>
+      </div>
+
+      
+      </div>
+     </div>
+        
+      
+
 
       <jv-daily-weather *ngFor="let daily of (details$ | async).daily"
                         [dailyWeather]="daily"
@@ -20,4 +39,5 @@
     <div *ngIf="error$ | async">Erro</div>
   </ng-template>
 
+ 
 </div>

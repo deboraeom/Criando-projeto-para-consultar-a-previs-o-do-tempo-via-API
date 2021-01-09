@@ -11,6 +11,7 @@ import { WeatherService } from 'src/app/shared/services/weather.service';
 import * as fromDetailsActions from './details.actions';
 import * as fromRouterSelectors from '../../../shared/state/router/router.selectors';
 
+
 @Injectable()
 export class DetailsEffects {
 
@@ -30,11 +31,21 @@ export class DetailsEffects {
       }),
       map(([current, daily]) => {
         const entity = daily;
+        
         entity.city = {...current.city, timeZone: daily.city.timeZone};
-        return fromDetailsActions.loadWeatherDetailsSuccess({ entity });
+        
+        let id = current.city.id;
+        let option =this.weatherService.getInitialOpnio(id);
+        
+        
+        
+        return fromDetailsActions.loadWeatherDetailsSuccess({ entity, option }) 
       }),
     )
+  
   );
+
+  
 
   constructor(private actions$: Actions,
               private store: Store<AppState>,
